@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Text Editor</title>
+</head>
+<body>
+
+<div class="top-row">
+    <label for="input-text">Enter Text:</label>
+    <input type="text" id="input-text" oninput="updateText()" placeholder="Type text here">
+</div>
+
+<div class="image-container">
+    <img src="image.webp" alt="Image" id="editable-image">
+    <div id="text-container">
+        <p id="editable-text"></p>
+    </div>
+</div>
+
+<div class="options-container" id="options-container">
+    <label for="font-family">Font Family:</label>
+    <select id="font-family" onchange="changeFont()">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+
+    <label for="font-size">Font Size:</label>
+    <input type="number" id="font-size" min="10" max="70" onchange="changeSize()" />
+
+    <label for="font-color">Font Color:</label>
+    <input type="color" id="font-color" onchange="changeColor()" />
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
